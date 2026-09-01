@@ -12,13 +12,17 @@ Input URL: `$ARGUMENTS`
 Follow these steps:
 
 ## 1. Validate input
+
 If `$ARGUMENTS` is empty or not a YouTube URL, ask the user to paste one and stop.
 Otherwise extract the video ID from the URL.
 
 ## 2. Fetch metadata + captions
+
 Try the automated path first:
 
-1. Check `which yt-dlp`; if missing, install it with `pip3 install -q -U yt-dlp`.
+1. Check `which yt-dlp`; if missing, install it with `pip3 install -q -U yt-dlp`. On macOS with a
+   Homebrew-managed Python this fails with "externally-managed-environment" (PEP 668) — in that
+   case fall back to `brew install yt-dlp`.
 2. Fetch metadata:
    `yt-dlp --skip-download --print "%(id)s|||%(title)s|||%(channel)s|||%(upload_date)s|||%(description)s" "<url>"`
 3. Fetch captions (prefer manual subs, fall back to auto-generated, prefer German/English):
@@ -35,6 +39,7 @@ least the video description/show notes, plus the title. Continue with whatever t
 provide instead of aborting.
 
 ## 3. Relevance filter
+
 Read the title, description, and transcript. Decide: is this video substantively about
 **Claude, Claude Code, AI coding assistants, LLM usage, prompting techniques, or AI-driven
 productivity workflows**?
@@ -46,7 +51,9 @@ productivity workflows**?
   the relevant segment's tips, note the rest was skipped.
 
 ## 4. Extract actionable tips
+
 For a relevant video, extract concrete, actionable takeaways — prioritize in this order:
+
 1. Anything about Claude Code specifically (skills, commands, hooks, MCP, workflows).
 2. Concrete prompting/context techniques.
 3. Token/cost reduction strategies.
@@ -56,11 +63,13 @@ Write each tip as a short, imperative, self-contained instruction (something Cla
 actually act on later), not a vague paraphrase of "he talked about X".
 
 ## 5. Log to the knowledge base
+
 Prepend a new entry (newest first) to `knowledge/ai-podcast-insights.md`, creating the file
 from the template at the top of it if this is the first entry. Use this format:
 
 ```markdown
 ## [Video title](https://youtube.com/watch?v=VIDEO_ID) — Channel, YYYY-MM-DD
+
 _Processed: <today's date>_
 
 <one-sentence summary of why this is relevant>
@@ -70,6 +79,7 @@ _Processed: <today's date>_
 ```
 
 ## 6. Commit and push
+
 Stage `knowledge/ai-podcast-insights.md` (and any script changes), commit with a message
 like `Add insights from "<video title>"`, and push to the current branch with
 `git push -u origin <branch>`. This is how the knowledge persists across sessions and
@@ -79,5 +89,6 @@ If the video was skipped as irrelevant in step 3, skip this step — there's not
 commit.
 
 ## 7. Summarize
+
 Give the user a short summary: relevant or skipped, and if relevant, the tips that were
 added (not just "done").
