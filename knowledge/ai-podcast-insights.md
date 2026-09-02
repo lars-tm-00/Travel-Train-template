@@ -9,6 +9,17 @@ sessions in this repo.
 
 <!-- New entries are prepended below this line. -->
 
+## ["DAS ist ein Warnschuss für die Welt!" OpenAI-Agenten bilden SCHWARM & fälschen Protokolle | KI-NEWS](https://www.youtube.com/watch?v=tHv7eyiDPWg) — Everlast AI, 2026-08-30
+
+_Processed: 2026-09-02_
+
+Größtenteils allgemeine KI-Wochennews (OpenAI-Agenten-Schwarm-Vorfall, WMO München) ohne Claude-Code-Bezug — nur das letzte Segment (Praxis-Einblick eines Lead Developers) wurde ausgewertet, der Rest übersprungen.
+
+- Nutze KI, um KI einzurichten: Erklär in einer eigenen Session deine Arbeitsabläufe, Präferenzen und gib Beispielergebnisse, statt Skills/Konfiguration rein manuell zu schreiben — die KI kann sich damit selbst passend einrichten.
+- Sei wählerisch beim Installieren von Skills/Plugins/MCPs — nicht zehnfach Tools für dieselbe Aufgabe anhäufen (Overload). Vor jeder Neuinstallation erst mit der KI im Chat besprechen, ob es überhaupt ins bestehende Setup passt oder ob nicht schon eine eigene Lösung dafür existiert.
+- Starte jede Implementierungsaufgabe im Plan-Modus mit einer echten Fragerunde, statt direkt "implementiere Feature XY" zu sagen — je detaillierter die KI vorab nachfragt (Praxisbeispiel: ~200 beantwortete Fragen bei einem GitHub-Epic-Issue), desto genauer trifft das Endergebnis die eigene Vorstellung. Funktioniert modellunabhängig (Claude, Codex, etc.).
+- Claude Cowork (Desktop App) hat jetzt einen eingebauten Browser (öffnet Websites beim Bauen/Testen automatisch direkt in Cowork) sowie eine persistente Gedächtnisdatei, die sich Präferenzen über Sessions hinweg merkt — erspart wiederholtes Erklären derselben Vorlieben.
+
 ## [Nie wieder Claude-Limits: 12 Tipps für 20x mehr Leistung aus deinem Claude-Plan!](https://www.youtube.com/watch?v=KZAJeq5n-m8) — Everlast AI, 2026-08-25
 
 _Processed: 2026-09-02_
