@@ -1,6 +1,7 @@
-# Travel-Train-template
+# claude-usage-knowledge
 
-Next.js travel/train booking template app.
+Personal AI-usage knowledge base (the underlying codebase is a leftover Next.js/Netlify
+starter template — irrelevant, kept only because the knowledge base lives on top of it).
 
 ## Personal AI-usage knowledge base
 
